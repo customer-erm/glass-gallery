@@ -1,0 +1,332 @@
+{
+  "version": "1.0",
+  "export_date": "2025-01-27T00:00:00.000Z",
+  "plugin": "Glass Gallery Pro",
+  "description": "Complete category import for glass gallery with industry-specific terms",
+  "categories": {
+    "glass_product_type": {
+      "taxonomy": "glass_product_type",
+      "label": "Product Types",
+      "terms": [
+        {
+          "name": "Shower Enclosures",
+          "slug": "shower-enclosures",
+          "description": "Complete shower enclosure systems"
+        },
+        {
+          "name": "Wine Cellars",
+          "slug": "wine-cellars",
+          "description": "Glass wine storage solutions"
+        },
+        {
+          "name": "Room Partitions",
+          "slug": "room-partitions",
+          "description": "Glass room dividers and partitions"
+        },
+        {
+          "name": "Stair Rails & Wind Screens",
+          "slug": "stair-rails-and-wind-screens",
+          "description": "Glass railings and protective screens"
+        },
+        {
+          "name": "Mirrors",
+          "slug": "mirrors",
+          "description": "Custom glass mirrors"
+        },
+        {
+          "name": "Sauna Glass",
+          "slug": "sauna-glass",
+          "description": "Heat-resistant glass for saunas"
+        },
+        {
+          "name": "Furnishings (Shelves, Tables, Cabinet Glass)",
+          "slug": "furnishings-shelves-tables-cabinet-glass",
+          "description": "Glass furniture and shelving"
+        },
+        {
+          "name": "Sneeze Guards",
+          "slug": "sneeze-guards",
+          "description": "Protective glass barriers"
+        },
+        {
+          "name": "Doggy Shower",
+          "slug": "doggy-shower",
+          "description": "Pet washing stations"
+        }
+      ]
+    },
+    "shower_shape": {
+      "taxonomy": "shower_shape",
+      "label": "Shower Shapes",
+      "terms": [
+        {
+          "name": "Single Door",
+          "slug": "single-door",
+          "description": "Single hinged door shower"
+        },
+        {
+          "name": "Inline",
+          "slug": "inline",
+          "description": "Straight inline shower configuration"
+        },
+        {
+          "name": "Corner",
+          "slug": "corner",
+          "description": "Corner shower installation"
+        },
+        {
+          "name": "Neo-Angle",
+          "slug": "neo-angle",
+          "description": "Angled corner shower design"
+        },
+        {
+          "name": "Shower Screen",
+          "slug": "shower-screen",
+          "description": "Fixed glass shower panel"
+        },
+        {
+          "name": "Glass on Tub",
+          "slug": "glass-on-tub",
+          "description": "Glass panels over bathtub"
+        }
+      ]
+    },
+    "glass_function": {
+      "taxonomy": "glass_function",
+      "label": "Functions",
+      "terms": [
+        {
+          "name": "Swinging",
+          "slug": "swinging",
+          "description": "Hinged door that swings open"
+        },
+        {
+          "name": "Single Sliding",
+          "slug": "single-sliding",
+          "description": "Single panel sliding door"
+        },
+        {
+          "name": "Double Sliding",
+          "slug": "double-sliding",
+          "description": "Two panel sliding system"
+        },
+        {
+          "name": "Bi-Fold",
+          "slug": "bi-fold",
+          "description": "Folding door system"
+        }
+      ]
+    },
+    "color_option": {
+      "taxonomy": "color_option",
+      "label": "Color Options",
+      "terms": [
+        {
+          "name": "Brushed Nickel",
+          "slug": "brushed-nickel",
+          "description": "Brushed nickel finish"
+        },
+        {
+          "name": "Chrome, Polished Nickel",
+          "slug": "chrome-polished-nickel",
+          "description": "Chrome and polished nickel finishes"
+        },
+        {
+          "name": "Oil-Rubbed Bronze/Matte Black",
+          "slug": "oil-rubbed-bronze-matte-black",
+          "description": "Dark bronze and matte black finishes"
+        },
+        {
+          "name": "Brushed Bronze/Dark Brushed Bronze/Champagne",
+          "slug": "brushed-bronze-dark-brushed-bronze-champagne",
+          "description": "Bronze and champagne finishes"
+        },
+        {
+          "name": "Brass, Satin Brass, Brushed Gold",
+          "slug": "brass-satin-brass-brushed-gold",
+          "description": "Gold and brass finishes"
+        },
+        {
+          "name": "Other",
+          "slug": "other",
+          "description": "Custom color options"
+        }
+      ]
+    },
+    "handle_style": {
+      "taxonomy": "handle_style",
+      "label": "Handle Styles",
+      "terms": [
+        {
+          "name": "Standard",
+          "slug": "standard",
+          "description": "Standard handle design"
+        },
+        {
+          "name": "Modern or Contemporary",
+          "slug": "modern-or-contemporary",
+          "description": "Modern and contemporary handle styles"
+        },
+        {
+          "name": "Traditional",
+          "slug": "traditional",
+          "description": "Traditional handle design"
+        },
+        {
+          "name": "Knobs or Holes",
+          "slug": "knobs-or-holes",
+          "description": "Knob handles or finger holes"
+        }
+      ]
+    },
+    "glass_feature": {
+      "taxonomy": "glass_feature",
+      "label": "Features",
+      "terms": [
+        {
+          "name": "Support Bar",
+          "slug": "support-bar",
+          "description": "Additional support bar"
+        },
+        {
+          "name": "Wet Room",
+          "slug": "wet-room",
+          "description": "Wet room configuration"
+        },
+        {
+          "name": "Steam Shower",
+          "slug": "steam-shower",
+          "description": "Steam shower compatible"
+        },
+        {
+          "name": "French/Double Doors",
+          "slug": "french-double-doors",
+          "description": "French or double door system"
+        },
+        {
+          "name": "Curbless/Handicap",
+          "slug": "curbless-handicap",
+          "description": "Accessible curbless design"
+        },
+        {
+          "name": "Transom",
+          "slug": "transom",
+          "description": "Transom panel above"
+        },
+        {
+          "name": "Towel Bar/Robe Hook",
+          "slug": "towel-bar-robe-hook",
+          "description": "Built-in towel bar or robe hook"
+        },
+        {
+          "name": "Robe Hook",
+          "slug": "robe-hook",
+          "description": "Integrated robe hook"
+        },
+        {
+          "name": "Angled Ceiling",
+          "slug": "angled-ceiling",
+          "description": "Angled ceiling accommodation"
+        }
+      ]
+    },
+    "framing_type": {
+      "taxonomy": "framing_type",
+      "label": "Framing Types",
+      "terms": [
+        {
+          "name": "Frameless",
+          "slug": "frameless",
+          "description": "No frame - clean glass look"
+        },
+        {
+          "name": "Framed",
+          "slug": "framed",
+          "description": "Full frame around glass"
+        },
+        {
+          "name": "Semi-Frameless",
+          "slug": "semi-frameless",
+          "description": "Partial framing system"
+        },
+        {
+          "name": "Header",
+          "slug": "header",
+          "description": "Header-only framing"
+        },
+        {
+          "name": "Grid Shower/Gridscape",
+          "slug": "grid-shower-gridscape",
+          "description": "Grid pattern framing"
+        }
+      ]
+    },
+    "glass_type": {
+      "taxonomy": "glass_type",
+      "label": "Glass Types",
+      "terms": [
+        {
+          "name": "Regular Clear (Standard)",
+          "slug": "regular-clear-standard",
+          "description": "Standard clear glass"
+        },
+        {
+          "name": "Low Iron (Ultra Clear, OptiWhite, Starphire)",
+          "slug": "low-iron-ultra-clear-optiwhite-starphire",
+          "description": "Ultra clear low iron glass"
+        },
+        {
+          "name": "Satin, Velour, Etched",
+          "slug": "satin-velour-etched",
+          "description": "Frosted and etched glass options"
+        },
+        {
+          "name": "Rain or Niagara",
+          "slug": "rain-or-niagara",
+          "description": "Textured rain or niagara pattern"
+        },
+        {
+          "name": "Color",
+          "slug": "color",
+          "description": "Colored glass options"
+        },
+        {
+          "name": "Mirror",
+          "slug": "mirror",
+          "description": "Mirror glass"
+        },
+        {
+          "name": "Reeded Glass & Other Patterns",
+          "slug": "reeded-glass-and-other-patterns",
+          "description": "Reeded and specialty pattern glass"
+        }
+      ]
+    },
+    "hinge_type": {
+      "taxonomy": "hinge_type",
+      "label": "Hinge Types",
+      "terms": [
+        {
+          "name": "Wall-to-glass",
+          "slug": "wall-to-glass",
+          "description": "Wall mounted hinge system"
+        },
+        {
+          "name": "Glass-to-glass",
+          "slug": "glass-to-glass",
+          "description": "Glass panel to glass panel hinge"
+        },
+        {
+          "name": "Glass-to-glass pivot",
+          "slug": "glass-to-glass-pivot",
+          "description": "Pivot hinge between glass panels"
+        },
+        {
+          "name": "Pivot",
+          "slug": "pivot",
+          "description": "Standard pivot hinge"
+        }
+      ]
+    }
+  }
+}

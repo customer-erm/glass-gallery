@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"C:\\Users\\justi\\OneDrive\\Documents\\ERM\\CUSTOMPLUGINS\\glass-gallery\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

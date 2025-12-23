@@ -1,0 +1,450 @@
+/**
+ * Glass Gallery Pro - Featured Gallery Styles
+ * 5-Column Vertical Carousel with Hard Edges
+ * Matching Main Gallery Design Language
+ */
+
+/* ===================================
+   Base Styles
+   =================================== */
+.ggp-featured-gallery {
+    position: relative;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+/* ===================================
+   Grid Mode Styles
+   =================================== */
+.ggp-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .ggp-featured-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
+
+.ggp-featured-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    background: #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.ggp-featured-item:hover {
+    transform: translateY(-4px);
+}
+
+.ggp-featured-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ggp-featured-item:hover img {
+    transform: scale(1.05);
+}
+
+.ggp-featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ggp-featured-item:hover .ggp-featured-overlay {
+    opacity: 1;
+}
+
+.ggp-featured-overlay h4 {
+    color: white;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.ggp-zoom-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ggp-featured-item:hover .ggp-zoom-icon {
+    opacity: 1;
+}
+
+/* ===================================
+   4-Column Carousel Mode
+   =================================== */
+.ggp-carousel-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.ggp-carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.ggp-carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.ggp-carousel-track.grabbing {
+    cursor: grabbing;
+    transition: none;
+}
+
+.ggp-carousel-slide {
+    flex-shrink: 0;
+    width: calc(25% - 1.125rem); /* 4 columns with gap */
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.ggp-carousel-slide:hover {
+    opacity: 0.9;
+}
+
+.ggp-carousel-image-wrap {
+    position: relative;
+    aspect-ratio: 3/4; /* Vertical format */
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+}
+
+.ggp-carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ggp-carousel-slide:hover .ggp-carousel-image {
+    transform: scale(1.05);
+}
+
+/* Carousel Navigation Buttons - Hard Edges */
+.ggp-carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.ggp-carousel-nav:hover {
+    background: #f0f0f0;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.ggp-carousel-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.ggp-carousel-prev {
+    left: 2rem;
+}
+
+.ggp-carousel-next {
+    right: 2rem;
+}
+
+.ggp-carousel-nav svg {
+    color: #1a1a1a;
+}
+
+@media (max-width: 1200px) {
+    .ggp-carousel-slide {
+        width: calc(33.333% - 1rem); /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .ggp-carousel-slide {
+        width: calc(50% - 0.75rem); /* 2 columns on mobile */
+    }
+
+    .ggp-carousel-track {
+        gap: 1rem;
+    }
+
+    .ggp-carousel-nav {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ggp-carousel-prev {
+        left: 1rem;
+    }
+
+    .ggp-carousel-next {
+        right: 1rem;
+    }
+}
+
+/* ===================================
+   Modal Styles - Matching Main Gallery
+   Hard Edges, Black Background, White Sidebar
+   =================================== */
+.ggp-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 999999;
+}
+
+.ggp-modal.ggp-active {
+    display: block;
+}
+
+.ggp-modal-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.ggp-modal-image-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: #000;
+}
+
+.ggp-modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 0.15s ease;
+}
+
+.ggp-modal-sidebar {
+    width: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.ggp-modal-header {
+    padding: 40px 30px;
+    min-height: 200px;
+}
+
+.ggp-modal-categories {
+    margin-bottom: 16px;
+    min-height: 32px;
+}
+
+.ggp-modal-cat-badge {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 4px 12px;
+    margin: 0 6px 6px 0;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ggp-modal-title {
+    margin: 0 0 16px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.ggp-modal-counter {
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Modal Navigation Buttons - Hard Edges */
+.ggp-modal-close {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.ggp-modal-close:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.ggp-modal-prev,
+.ggp-modal-next {
+    position: fixed;
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.ggp-modal-prev:hover,
+.ggp-modal-next:hover {
+    background: #f0f0f0;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.ggp-modal-prev {
+    left: 30px;
+}
+
+.ggp-modal-next {
+    right: 430px; /* 400px sidebar + 30px margin */
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .ggp-modal-container {
+        flex-direction: column;
+    }
+
+    .ggp-modal-image-area {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .ggp-modal-sidebar {
+        width: 100%;
+        max-height: 40vh;
+    }
+
+    .ggp-modal-header {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .ggp-modal-prev {
+        left: 20px;
+    }
+
+    .ggp-modal-next {
+        right: 20px;
+    }
+
+    .ggp-modal-close {
+        top: 20px;
+        right: 20px;
+    }
+
+    .ggp-modal-prev,
+    .ggp-modal-next {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ===================================
+   Empty State
+   =================================== */
+.ggp-featured-empty {
+    text-align: center;
+    padding: 3rem;
+    color: #999;
+    font-size: 1.125rem;
+}
+
+/* ===================================
+   Animations
+   =================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation for grid items */
+.ggp-featured-item {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.ggp-featured-item:nth-child(1) { animation-delay: 0.1s; }
+.ggp-featured-item:nth-child(2) { animation-delay: 0.2s; }
+.ggp-featured-item:nth-child(3) { animation-delay: 0.3s; }
+.ggp-featured-item:nth-child(4) { animation-delay: 0.4s; }
+.ggp-featured-item:nth-child(5) { animation-delay: 0.5s; }
+.ggp-featured-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
